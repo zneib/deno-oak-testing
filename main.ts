@@ -10,6 +10,9 @@ router
   .get("/api", (context) => {
     context.response.body = data;
   })
+  .get("/api/1", (context) => {
+    context.response.body = data[0]
+  })
   .get("/api/:dinosaur", (context) => {
     if (context?.params?.dinosaur) {
       const found = data.find((item) =>
